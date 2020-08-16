@@ -6114,17 +6114,7 @@ function copyToClipboard(str) {
 function file_video(path) {
   const url = window.location.origin + path;
   let player_items = [
-    {
-      text: "MXPlayer(Free)",
-      href: `intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end`,
-    },
-    {
-      text: "MXPlayer(Pro)",
-      href: `intent:${url}#Intent;package=com.mxtech.videoplayer.pro;S.title=${path};end`,
-    },
-    { text: "nPlayer", href: `nplayer-${url}` },
-    { text: "VLC", href: `vlc://${url}` },
-    { text: "PotPlayer", href: `potplayer://${url}` },
+    { text: "ビデオ", href: `vlc://${url}` },
   ]
     .map(
       (it) =>
@@ -6132,10 +6122,10 @@ function file_video(path) {
     )
     .join("");
   player_items += `<li class="mdui-divider"></li>
-                   <li class="mdui-menu-item"><a id="copy-link" class="mdui-ripple">Copy Link</a></li>`;
+                   <li class="mdui-menu-item"><a id="copy-link" class="mdui-ripple">写す</a></li>`;
   const playBtn = `
       <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#player-items'}">
-        <i class="mdui-icon material-icons">&#xe039;</i>Play In External Player<i class="mdui-icon material-icons">&#xe5cf;</i>
+        <i class="mdui-icon material-icons">&#xe039;</i>External<i class="mdui-icon material-icons">&#xe5cf;</i>
       </button>
       <ul class="mdui-menu" id="player-items">${player_items}</ul>`;
   const content = `
@@ -6145,7 +6135,7 @@ function file_video(path) {
 	<br>${playBtn}
 	<!-- ???? -->
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Download Link</label>
+	  <label class="mdui-textfield-label">ダウンロード</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 </div>
@@ -6179,7 +6169,7 @@ function file_audio(path) {
 	<br>
 	<!-- ???? -->
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Download Link</label>
+	  <label class="mdui-textfield-label">ダウンロード</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 </div>
@@ -6256,7 +6246,7 @@ function file_image(path) {
     </div>
 	<br>
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Download Link</label>
+	  <label class="mdui-textfield-label">ダウンロード</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
         <br>
