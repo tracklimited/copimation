@@ -6077,7 +6077,7 @@ function file_code(path) {
 <pre id="editor" ></pre>
 </div>
 <div class="mdui-textfield">
-	<label class="mdui-textfield-label">Download Link</label>
+	<label class="mdui-textfield-label">ダウンロード</label>
 	<input class="mdui-textfield-input" type="text" value="${href}"/>
 </div>
 <a href="${href}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
@@ -6149,7 +6149,7 @@ function file_video(path) {
   const dp = new DPlayer({
     container: document.getElementById("dplayer"),
     loop: false,
-    screenshot: true,
+    screenshot: false,
     preload: "auto",
     video: {
       quality: [{ url: url, type: "normal" }],
