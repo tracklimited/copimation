@@ -5513,14 +5513,6 @@ function init() {
 <header class="nexmoe-nav">
 	<div class="navSize">
 			<a href="/"><img class="avatar" src="${UI.avatar}"/></a>
-			<div class="nav_menu"  style="display:${
-        UI.disable_navicon == true ? "none" : "block"
-      }">
-				<ul class="menu_ul">
-					<li class="menu_li"><a href="https://t.me/copimation" target="_blank">Contact</a></li>
-				</ul>
-				<div class="nav_icon" ></div>
-			</div>
 	</div>
 </header>
 <div class="mdui-container">
@@ -5612,7 +5604,7 @@ function nav(path) {
                 <i class="mdui-icon material-icons">search</i>
             </button>
             <form id="search_bar_form" method="get" action="/${cur}:search">
-            <input class="mdui-textfield-input" type="text" name="q" placeholder="Search in current drive" value="${search_text}"/>
+            <input class="mdui-textfield-input" type="text" name="q" placeholder="サーチ" value="${search_text}"/>
             </form>
             <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
         </div>`;
@@ -6125,7 +6117,7 @@ function file_video(path) {
                    <li class="mdui-menu-item"><a id="copy-link" class="mdui-ripple">写す</a></li>`;
   const playBtn = `
       <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#player-items'}">
-        </i>エクスターナル<i class="mdui-icon material-icons">&#xe5cf;</i>
+        </i>エクスターナル</i>
       </button>
       <ul class="mdui-menu" id="player-items">${player_items}</ul>`;
   const content = `
